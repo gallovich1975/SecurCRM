@@ -1,34 +1,97 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* AgencyOS Custom Styles */
+
+/* Sidebar styles */
+.sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.sidebar-link:hover {
+    @apply bg-slate-100;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.sidebar-link.active {
+    @apply bg-indigo-50 text-indigo-700;
 }
 
-.App-link {
-    color: #61dafb;
+/* Dashboard grid */
+.dashboard-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* KPI Card */
+.kpi-card {
+    @apply bg-white rounded-xl border border-slate-100 p-6 shadow-sm transition-all duration-200;
+}
+
+.kpi-card:hover {
+    @apply shadow-md -translate-y-0.5;
+}
+
+/* Chart container */
+.chart-container {
+    @apply bg-white rounded-xl border border-slate-100 p-6 shadow-sm;
+}
+
+/* Table wrapper */
+.table-wrapper {
+    @apply bg-white rounded-xl border border-slate-100 shadow-sm overflow-hidden;
+}
+
+/* Empty state */
+.empty-state {
+    @apply flex flex-col items-center justify-center py-12 text-center;
+}
+
+/* File upload area */
+.file-upload-area {
+    @apply border-2 border-dashed border-slate-300 rounded-xl p-8 text-center transition-all duration-200 cursor-pointer;
+}
+
+.file-upload-area:hover {
+    @apply border-indigo-400 bg-indigo-50/50;
+}
+
+.file-upload-area.drag-over {
+    @apply border-indigo-500 bg-indigo-50;
+}
+
+/* Status indicators */
+.status-dot {
+    @apply w-2 h-2 rounded-full;
+}
+
+.status-dot.success {
+    @apply bg-emerald-500;
+}
+
+.status-dot.warning {
+    @apply bg-amber-500;
+}
+
+.status-dot.error {
+    @apply bg-red-500;
+}
+
+.status-dot.info {
+    @apply bg-indigo-500;
+}
+
+/* Mobile menu overlay */
+.mobile-overlay {
+    @apply fixed inset-0 bg-black/50 z-40 lg:hidden;
+}
+
+/* Loading spinner */
+.spinner {
+    @apply animate-spin h-5 w-5 border-2 border-slate-200 border-t-indigo-600 rounded-full;
+}
+
+/* Currency formatting */
+.currency {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Notification badge */
+.notification-badge {
+    @apply absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-medium rounded-full flex items-center justify-center;
 }
