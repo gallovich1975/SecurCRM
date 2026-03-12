@@ -1,0 +1,156 @@
+{
+  "brand_identity": {
+    "name": "AgencyOS",
+    "persona": "The Swiss Architect",
+    "core_values": [
+      "Clarity over decoration",
+      "Data density with breathing room",
+      "Professional warmth"
+    ],
+    "emotional_archetype": "Swiss & High-Contrast meets Organic Utility",
+    "visual_motif": "Clean lines, subtle depth, rigorous grids"
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "DEFAULT": "#4338ca",
+        "foreground": "#ffffff",
+        "hover": "#3730a3",
+        "description": "Deep Electric Indigo - Professional yet energetic"
+      },
+      "secondary": {
+        "DEFAULT": "#f3f4f6",
+        "foreground": "#1f2937",
+        "hover": "#e5e7eb",
+        "description": "Cool Light Gray - For secondary actions"
+      },
+      "accent": {
+        "DEFAULT": "#10b981",
+        "foreground": "#ffffff",
+        "description": "Emerald Green - For success and financial growth metrics"
+      },
+      "destructive": {
+        "DEFAULT": "#ef4444",
+        "foreground": "#ffffff",
+        "description": "Red - For errors and critical alerts"
+      },
+      "background": {
+        "app": "#f9fafb",
+        "card": "#ffffff",
+        "sidebar": "#ffffff"
+      },
+      "text": {
+        "primary": "#111827",
+        "secondary": "#6b7280",
+        "muted": "#9ca3af"
+      },
+      "border": "#e5e7eb"
+    },
+    "rules": [
+      "Never use pure black (#000000). Use #111827.",
+      "Primary color is reserved for the main call-to-action (Create, Save, Send).",
+      "Use 'accent' color sparingly for financial positive trends.",
+      "Backgrounds should be slightly off-white (#f9fafb) to distinguish from white cards."
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Plus Jakarta Sans, sans-serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-3xl font-bold tracking-tight text-gray-900",
+      "h2": "text-2xl font-semibold tracking-tight text-gray-900",
+      "h3": "text-xl font-semibold text-gray-900",
+      "body": "text-sm font-normal text-gray-600 leading-relaxed",
+      "label": "text-xs font-medium uppercase tracking-wider text-gray-500"
+    },
+    "imports": [
+      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap"
+    ]
+  },
+  "layout_strategies": {
+    "dashboard_grid": {
+      "type": "Bento Grid",
+      "classes": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6",
+      "rules": "Widgets should snap to the grid. Use col-span-2 for charts, col-span-1 for summary cards."
+    },
+    "sidebar": {
+      "width": "w-64",
+      "style": "fixed left-0 top-0 h-full border-r bg-white z-30 hidden lg:block",
+      "mobile_trigger": "lg:hidden"
+    },
+    "page_container": {
+      "classes": "lg:pl-64 min-h-screen bg-gray-50/50"
+    },
+    "content_wrapper": {
+      "classes": "max-w-7xl mx-auto space-y-6"
+    },
+    "card_style": {
+      "classes": "bg-white rounded-xl border border-gray-100 shadow-sm p-6"
+    }
+  },
+  "components": {
+    "buttons": {
+      "base": "inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
+      "variants": {
+        "default": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm",
+        "outline": "border border-input hover:bg-accent hover:text-accent-foreground",
+        "ghost": "hover:bg-accent hover:text-accent-foreground",
+        "link": "text-primary underline-offset-4 hover:underline"
+      }
+    },
+    "inputs": {
+      "classes": "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    },
+    "tables": {
+      "container": "w-full overflow-auto rounded-lg border bg-white shadow-sm",
+      "header": "bg-gray-50/50 border-b",
+      "row": "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
+      "cell": "p-4 align-middle text-sm font-medium"
+    },
+    "charts": {
+      "library": "recharts",
+      "style": "minimalist, thin lines, soft gradients",
+      "colors": ["#4338ca", "#10b981", "#f59e0b", "#ef4444"]
+    }
+  },
+  "motion": {
+    "page_transition": {
+      "initial": { "opacity": 0, "y": 10 },
+      "animate": { "opacity": 1, "y": 0 },
+      "exit": { "opacity": 0, "y": -10 },
+      "transition": { "duration": 0.2, "ease": "easeOut" }
+    },
+    "hover_effects": "transition-all duration-200 ease-in-out hover:-translate-y-0.5"
+  },
+  "assets": {
+    "logo_placeholder": "https://images.unsplash.com/photo-1670834416065-5b4419def835?auto=format&fit=crop&w=100&q=80",
+    "avatars": [
+      "https://images.unsplash.com/photo-1629507313712-f21468afdf2e?auto=format&fit=crop&w=150&q=80",
+      "https://images.unsplash.com/photo-1581065178047-8ee15951ede6?auto=format&fit=crop&w=150&q=80",
+      "https://images.unsplash.com/photo-1629507208649-70919ca33793?auto=format&fit=crop&w=150&q=80",
+      "https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?auto=format&fit=crop&w=150&q=80"
+    ],
+    "dashboard_placeholders": [
+      "https://images.unsplash.com/photo-1705909770198-7e83c24e1616?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1705909773171-4ba952b9c0af?auto=format&fit=crop&w=800&q=80"
+    ],
+    "abstract_shapes": [
+      "https://images.unsplash.com/photo-1670834416065-5b4419def835?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1670834416096-08d3e126f083?auto=format&fit=crop&w=500&q=80"
+    ]
+  },
+  "universal_guidelines": [
+    "Always use 'data-testid' for interactive elements.",
+    "Do not use gradients for main backgrounds; use them only for subtle highlights or active states.",
+    "Ensure 20px+ padding inside all cards.",
+    "Use 'sonner' for all toast notifications.",
+    "Forms must use 'react-hook-form' with 'zod' validation.",
+    "Date handling must use 'date-fns'.",
+    "All currency must be formatted as EUR (€).",
+    "Language must be Italian."
+  ],
+  "instructions_to_main_agent": "You are building a high-end agency management system. Use the provided color palette and typography strictly. When creating the dashboard, prioritize the 'Bento Grid' layout. For the 'Contracts' section, ensure the file upload area is prominent and uses a dashed border style. For 'Invoices', focus on clear status badges (Paid = Green, Pending = Yellow, Overdue = Red). Use the 'Plus Jakarta Sans' font for all headings to give it a distinct agency feel. Do not ask for user clarification; assume best practices for a Web Agency context."
+}
