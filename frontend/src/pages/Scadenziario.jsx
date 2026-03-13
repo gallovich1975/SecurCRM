@@ -284,12 +284,12 @@ export const Scadenziario = () => {
                       name="client_id"
                       control={control}
                       render={({ field }) => (
-                        <Select onValueChange={field.onChange} value={field.value || ''}>
+                        <Select onValueChange={field.onChange} value={field.value || 'none'}>
                           <SelectTrigger>
                             <SelectValue placeholder="Seleziona" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="">Nessuno</SelectItem>
+                            <SelectItem value="none">Nessuno</SelectItem>
                             {clients.map((client) => (
                               <SelectItem key={client.id} value={client.id}>
                                 {client.nome}
@@ -306,12 +306,12 @@ export const Scadenziario = () => {
                       name="project_id"
                       control={control}
                       render={({ field }) => (
-                        <Select onValueChange={field.onChange} value={field.value || ''}>
+                        <Select onValueChange={field.onChange} value={field.value || 'none'}>
                           <SelectTrigger>
                             <SelectValue placeholder="Seleziona" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="">Nessuno</SelectItem>
+                            <SelectItem value="none">Nessuno</SelectItem>
                             {projects.map((project) => (
                               <SelectItem key={project.id} value={project.id}>
                                 {project.nome}
@@ -330,12 +330,12 @@ export const Scadenziario = () => {
                     name="ricorrenza"
                     control={control}
                     render={({ field }) => (
-                      <Select onValueChange={field.onChange} value={field.value || ''}>
+                      <Select onValueChange={field.onChange} value={field.value || 'none'}>
                         <SelectTrigger>
                           <SelectValue placeholder="Nessuna" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="">Nessuna</SelectItem>
+                          <SelectItem value="none">Nessuna</SelectItem>
                           <SelectItem value="mensile">Mensile</SelectItem>
                           <SelectItem value="trimestrale">Trimestrale</SelectItem>
                           <SelectItem value="semestrale">Semestrale</SelectItem>

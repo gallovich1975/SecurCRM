@@ -278,12 +278,12 @@ export const Fatturazione = () => {
                       name="project_id"
                       control={control}
                       render={({ field }) => (
-                        <Select onValueChange={field.onChange} value={field.value || ''}>
+                        <Select onValueChange={field.onChange} value={field.value || 'none'}>
                           <SelectTrigger>
                             <SelectValue placeholder="Seleziona progetto" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="">Nessuno</SelectItem>
+                            <SelectItem value="none">Nessuno</SelectItem>
                             {projects.map((project) => (
                               <SelectItem key={project.id} value={project.id}>
                                 {project.nome}
